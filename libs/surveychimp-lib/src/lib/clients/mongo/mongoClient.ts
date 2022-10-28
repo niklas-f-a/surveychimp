@@ -2,9 +2,9 @@
 import mongoose from 'mongoose';
 
 export const connect = async (): Promise<typeof mongoose> => {
-    console.log('DATABASE_URL', process.env.DATABASE_URL)
-    if (!process.env.DATABASE_URL) {
-        throw "400";
+    const connectionString = process.env.DATABASE_URL;
+    if(typeof connectionString !== 'string'){
+        throw Error('500')
     }
-    return mongoose.connect(process.env.DATABASE_URL);
+    return mongoose.connect(connectionString);
 }
