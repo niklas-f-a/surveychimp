@@ -16,7 +16,7 @@ export interface ISurveyRecipient {
 }
 
 const RecipientSchema = new Schema<ISurveyRecipient>({ name: String, mobileNumber: String });
-const ResponseSchema = new Schema<ISurveyResponse>({ rating: Number }, { timestamps: true });
+const ResponseSchema = new Schema<ISurveyResponse>({ rating: Number, comment: String }, { timestamps: true });
 
 const SurveySchema = new Schema<ISurvey>({
     recipient: RecipientSchema,

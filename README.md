@@ -33,7 +33,7 @@ npx nx serve surveychimp-spa
 Komponentbibliotek med React-komponenter som kan användas på Reactsajten, Hemsidan eller andra platser. Använder Storybook för att visa upp komponenter.
 
 ```bash
-npx nx serve trollo-api
+npx nx serve surveychimp-api
 ```
 
 ### surveychimp-lib

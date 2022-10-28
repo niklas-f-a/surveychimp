@@ -1,4 +1,4 @@
-@baseUrl=http://localhost:333
+@baseUrl=http://localhost:3333
 
 POST {{baseUrl}}/survey
 Content-Type: application/json
@@ -6,22 +6,20 @@ Content-Type: application/json
 {
     "recipient": {
         "name": "Jonatan",
-        "mobileNumber": "+46 72 300 36 42"
+        "mobileNumber": "070 123 12 12"
     }
 }
 
 ###
 
-GET {{baseUrl}}/survey/3
+GET {{baseUrl}}/survey/635ad5b2cf3d50daaa87c966
 
 ###
 
-PATCH {{baseUrl}}/survey/6354fa3e707d56d9524fd2f3
+PATCH {{baseUrl}}/survey/635ad5b2cf3d50daaa87c966
 Content-Type: application/json
 
 {
-    "response": {
-        "rating": 3,
-        "comment": ""
-    }
+    "rating": 3,
+    "comment": "Det var toppen!"
 }
