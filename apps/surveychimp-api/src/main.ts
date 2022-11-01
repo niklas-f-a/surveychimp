@@ -25,7 +25,7 @@ const port = process.env.port || 3333;
 try {
   connect().then(() => {
     const server = app.listen(port, () => {
-      console.log(`Listening at http://localhost:${port}/api`);
+      console.log(`Hello, Listening at http://localhost:${port}/api`);
     });
     server.on('error', () => console.log('error'));
   })
