@@ -54,7 +54,8 @@
       "defaultConfiguration": "development",
       "options": {
         "buildTarget": "surveychimp-survey-spa:build",
-        "hmr": true
+        "hmr": true,
+        "proxyConfig": "apps/surveychimp-survey-spa/proxy.conf.json"
       },
       "configurations": {
         "development": {
