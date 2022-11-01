@@ -7,6 +7,7 @@ databases:
 domains:
 - domain: test-survey.surveychimp-and-iths.me
   type: PRIMARY
+  zone: surveychimp-and-iths.me
 name: survey-chimp-test
 region: ams
 services:
