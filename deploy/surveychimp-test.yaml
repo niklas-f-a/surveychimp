@@ -4,6 +4,9 @@ databases:
   name: db-surveychimp-test
   production: true
   version: "5"
+domains:
+- domain: test-survey.surveychimp-and-iths.me
+  type: PRIMARY
 name: survey-chimp-test
 region: ams
 services:
@@ -25,17 +28,19 @@ services:
   instance_size_slug: basic-xxs
   name: survey-chimp-api
   routes:
-  - path: /
+  - path: /api
   run_command: node ./dist/apps/surveychimp-api/main.js
   source_dir: /
 static_sites:
-- build_command: npx nx run surveychimp-survey-spa:build:production
+- build_command: npx nx build surveychimp-survey-spa
+  catchall_document: index.html
   environment_slug: node-js
   github:
     branch: test
     deploy_on_push: true
     repo: niklas-f-a/surveychimp
-  name: survey-chimp-spa
+  name: surveychimp-spa
+  output_dir: dist/apps/surveychimp-survey-spa
   routes:
-  - path: /surveychimp
+  - path: /
   source_dir: /
