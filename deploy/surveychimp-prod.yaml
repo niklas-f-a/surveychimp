@@ -1,13 +1,13 @@
 databases:
-- cluster_name: db-surveychimp-test
+- cluster_name: db-mongodb-ams3-prod
   engine: MONGODB
-  name: db-surveychimp-test
+  name: db-mongodb-ams3-prod
   production: true
   version: "5"
 domains:
-- domain: test-survey.surveychimp-and-iths.me
+- domain: survey.surveychimp-and-iths.me
   type: PRIMARY
-name: survey-chimp-test
+name: survey-chimp-prod
 region: ams
 services:
 - build_command: npx nx run surveychimp-api:build:production
@@ -15,18 +15,17 @@ services:
   envs:
   - key: DATABASE_URL
     scope: RUN_TIME
-    value: ${db-surveychimp-test.DATABASE_URL}
+    value: ${db-mongodb-ams3-prod.DATABASE_URL}
   - key: CA_CERT
     scope: RUN_TIME
-    value: ${db-surveychimp-test.CA_CERT}
+    value: ${db-mongodb-ams3-prod.CA_CERT}
   github:
-    branch: test
-    deploy_on_push: true
+    branch: main
     repo: niklas-f-a/surveychimp
   http_port: 3333
   instance_count: 1
   instance_size_slug: basic-xxs
-  name: survey-chimp-api
+  name: surveychimp-prod
   routes:
   - path: /api
   run_command: node ./dist/apps/surveychimp-api/main.js
@@ -36,8 +35,7 @@ static_sites:
   catchall_document: index.html
   environment_slug: node-js
   github:
-    branch: test
-    deploy_on_push: true
+    branch: main
     repo: niklas-f-a/surveychimp
   name: surveychimp-spa
   output_dir: dist/apps/surveychimp-survey-spa
