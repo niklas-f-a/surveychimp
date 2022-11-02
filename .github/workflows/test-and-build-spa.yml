@@ -4,7 +4,7 @@ on:
   pull_request:
     branches: [ main ]
     paths: 
-      - './apps/surveychimp-spa/**'
+      - 'apps/surveychimp-spa/**'
 
 jobs:
   build:
