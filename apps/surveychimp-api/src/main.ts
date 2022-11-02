@@ -14,5 +14,3 @@ try {
   console.log('error');
   throw e;
 }
-
-console.log('hej')
