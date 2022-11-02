@@ -20,6 +20,9 @@ export function App() {
           path="/survey/:surveyId"
           element={<SurveyPage />}
         />
+        <Route
+          path="/"
+          element={<div>Du är på förstasidan</div>} />
       </Routes>
     </StyledApp>
   );
