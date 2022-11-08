@@ -23,3 +23,6 @@ Content-Type: application/json
     "rating": 3,
     "comment": "Det var toppen!"
 }
+
+###
+GET {{baseUrl}}/surveys
