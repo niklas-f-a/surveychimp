@@ -10,7 +10,7 @@ import { nextTick } from 'process';
 
 const router = Router();
 
-router.get('/healthcheck', (req, res) => res.status(200).send())
+router.get('/healthcheck', (req, res) => res.status(200).send());
 
 router.get(
   '/survey/:surveyId',
@@ -82,6 +82,8 @@ router.patch(
 
 router.get('/surveys', async (req, res, next) => {
   try {
+    throw new Error('Fake crash from api');
+
     const survey = await getAllSurveys();
     res.json(survey);
   } catch (err) {
