@@ -19,6 +19,7 @@ const SurveyStars = () => {
   }, []);
   const ratingChanged = (newRating: number) => {
     console.log(newRating);
+    throw new Error('Fake crash');
   };
 
   return (
