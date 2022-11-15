@@ -10,6 +10,8 @@ import { nextTick } from 'process';
 
 const router = Router();
 
+router.get('/healthcheck', (req, res) => res.status(200).send())
+
 router.get(
   '/survey/:surveyId',
   param('surveyId').isMongoId(),
