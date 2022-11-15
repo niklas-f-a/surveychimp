@@ -26,3 +26,6 @@ Content-Type: application/json
 
 ###
 GET {{baseUrl}}/surveys
+
+###
+GET {{baseUrl}}/healthcheck
