@@ -1,4 +1,6 @@
-@baseUrl=http://localhost:3333
+# @baseUrl=http://localhost:3333
+# @baseUrl=https://test-survey.surveychimp-and-iths.me/api
+@baseUrl=https://survey.surveychimp-and-iths.me/api
 
 POST {{baseUrl}}/survey
 Content-Type: application/json
