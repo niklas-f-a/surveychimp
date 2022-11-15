@@ -5,8 +5,9 @@ import { ISurvey } from '@surveychimp/surveychimp-lib';
 import ReactStars from 'react-stars';
 
 const SurveyPage = () => {
-    const { surveyId } = useParams();
-    const [survey, setSurvey] = useState<ISurvey>()
+  const { surveyId } = useParams();
+  const [survey, setSurvey] = useState<ISurvey>();
+
 
     useEffect(() => {
         if (surveyId) {
@@ -21,7 +22,6 @@ const SurveyPage = () => {
         console.log(newRating)
       }
 
-
     return (<>
     <h1>Survey</h1>
     <p>{survey?.recipient?.name}</p>
@@ -34,3 +34,4 @@ const SurveyPage = () => {
 }
 
 export default SurveyPage;
+
