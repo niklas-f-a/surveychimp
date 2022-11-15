@@ -1,19 +1,14 @@
-
 import styled from 'styled-components';
 import SurveyPage from './pages/SurveyPage';
 
 import { Route, Routes } from 'react-router-dom';
 import ThankYou from './pages/ThankYou';
 
-
-
 const StyledApp = styled.div`
-    // Your style here
+  // Your style here
 `;
 
-
 export function App() {
-
   return (
     <StyledApp>
       <Routes>
@@ -28,12 +23,9 @@ export function App() {
           <Route
           path="/thankyou"
           element={<ThankYou/>}/>
-
       </Routes>
     </StyledApp>
   );
-
 }
-
 
 export default App;
